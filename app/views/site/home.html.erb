@@ -1,0 +1,25 @@
+<div class="home">
+
+<h1>Search</h1>
+
+<%= form_for :search, url: search_path do |s| %>
+
+	<%= s.number_field :x, value: 0 %>
+
+	<%= s.number_field :y, value: 0 %>
+
+	<%= s.number_field :z, value: 0 %> <br>
+
+	<%= s.label :x, class: "coordinatelabel" %>
+	<%= s.label :y, class: "coordinatelabel" %>
+	<%= s.label :z, class: "coordinatelabel" %>  <br><br>
+
+	<span class="voxels"><%= s.label "Region of interest: +/-" %>	
+<div class="styled-select">
+	<%= select_tag(:range, options_for_select([['0', 0], ['3', 3], ['5', 5]])) %></div></span> <br><br>
+
+	<%= s.submit 'Search', class: "btn btn-default" %>
+
+<% end %>
+
+</div>

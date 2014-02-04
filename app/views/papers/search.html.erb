@@ -1,0 +1,21 @@
+<div class="results">
+
+<h1>Results</h1>
+
+<% @results.each do |r| %>
+
+	<% @title = Title.where(:doi => r.doi) %>
+
+	<a href="http://doi.org/<%= r.doi %>" target="_blank" class="title">
+		<% if @title[0].title == "Error retrieving title 3" %>
+			<%= r.doi %>
+		<% else %>	
+			<%= @title[0].title %>
+		<% end %>
+	</a><br>
+
+	<span class="journal"><%= r.journal %></span><br><br>
+
+<% end %>
+
+</div>
