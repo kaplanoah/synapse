@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
 	    @user=User.new(new_user)
 	    if @user.save
-	        flash[:success] = "Welcome to the Cook Book app!"
+	        flash[:success] = "Welcome!"
 	        sign_in @user
 	        redirect_to @user
 	    else

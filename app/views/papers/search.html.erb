@@ -2,6 +2,10 @@
 
 <h1>Results</h1>
 
+<% if @results.empty? %>
+<p>No articles</p>
+<% end %>
+
 <% @results.each do |r| %>
 
 	<% @title = Title.where(:doi => r.doi) %>
@@ -17,5 +21,7 @@
 	<span class="journal"><%= r.journal %></span><br><br>
 
 <% end %>
+
+<%= link_to "Don't see your paper?", new_newpaper_path %>
 
 </div>

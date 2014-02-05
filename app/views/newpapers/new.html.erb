@@ -1,0 +1,54 @@
+<div class="col-sm-8 col-sm-offset-2 newpaper">
+
+<h2>Adding a Research Article</h2> <br>
+
+<p>If Synapse does not contain your article, you can submit it for verification using the form below.</p>
+
+<p>To add an article, you must:</p>
+<ul>
+	<li>be a publicly listed author of the article</li>
+	<li>provide your article's unique digital object identifier (DOI)</li>
+	<li>enter MNI coordinates</li>
+</ul>
+
+
+
+<br>
+
+<a href="#">What is a DOI?</a> <br>
+<a href="#">Converting to MNI</a> <br><br><br>
+
+<%= form_for @newpaper do |p| %>
+
+    <label>Title</label> <br>
+    <%= p.text_field :title %> <br><br>
+
+    <label>Journal</label>  <br>
+    <%= p.text_field :journal %> <br><br>
+
+    <label>DOI:</label>  <br>
+    <%= p.text_field :doi %> <br><br>
+
+    <label>Your name</label> <br>
+    <%= p.text_field :author %> <br><br>
+
+    <p>Your contact information will only be used to verify articles</p>
+
+    <label>Email</label> <br>
+    <%= p.text_field :email %> <br><br>
+
+    <label>Phone</label> <br>
+    <%= p.text_field :phone %> <br><br>
+
+
+
+
+
+
+    <%= p.submit "Submit", :class => "btn btn-default" %> <br><br>
+
+    <p>Please contact <a href="mailto:noahkaplan4@gmail.com", target="_blank">Noah Kaplan</a> with any questions</p>
+
+<% end %>
+
+</div>

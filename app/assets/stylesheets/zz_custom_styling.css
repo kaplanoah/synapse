@@ -37,3 +37,11 @@ body {
 	margin-left: 1px;
 	outline: none;
 }
+
+.results p {
+	margin-bottom: 40px;
+}
+
+.newpaper a {
+	color: #870700;
+}

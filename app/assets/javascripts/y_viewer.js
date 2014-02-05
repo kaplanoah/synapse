@@ -1191,13 +1191,13 @@
 
     function ViewSettings(options) {
       this.settings = {
-        panzoomEnabled: true,
+        panzoomEnabled: false,
         crosshairsEnabled: true,
         crosshairsWidth: 1,
         crosshairsColor: 'darkblue',
         labelsEnabled: true,
-        visibilityIconEnabled: true,
-        deletionIconEnabled: true
+        visibilityIconEnabled: false,
+        deletionIconEnabled: false
       };
       this.updateSettings(options);
     }
