@@ -1,0 +1,39 @@
+body {
+  padding-top: 80px;
+  background-color: #FAF8F2;
+  margin-bottom: 50px;
+}
+
+.navbar-inverse {
+	background-color: #870700;
+	border: none;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+	color: White;
+}
+
+.btn-default, .btn-default:hover {
+	background-color: #870700;
+	border: none;
+	color: White;
+	margin-top: 15px;
+	padding: 9px 22px;
+	font-size: 16px;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+	border-radius: 1px;
+	font-size: 14px;
+	background: #D6D4D4;
+	border: 1px solid #BFBFBF;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: #D6D4D4;
+	border: 1px solid #BFBFBF;
+	box-shadow: 1px 0px 1px #616161, 0px 1px 1px #616161, -1px 0px 1px #616161, -1px 0px 1px #616161;
+	font-size: 12px;
+	margin-left: 1px;
+	outline: none;
+}

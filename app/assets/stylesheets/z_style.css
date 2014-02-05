@@ -10,7 +10,8 @@
 
 #view_axial {
   width: 280px;
-  height: 260px; }
+  height: 260px;
+  margin-top: 14px; }
 
 #view_coronal {
   width: 280px;
@@ -107,6 +108,7 @@ canvas {
 	margin-top: 20px;
 	float: left;
 	font: 12px;
+	visibility: hidden; /* ADDED */
 }
 
 .data_display_row {
@@ -114,6 +116,7 @@ canvas {
 	width: 126px;
 	text-align: center;
 	padding: 7px 12px 7px 0px;
+	visibility: hidden; /* ADDED */
 }
 
 #data_current_coords {
@@ -124,6 +127,7 @@ canvas {
 	background: #ccc;
 	border: 1px #aaa;
 	line-height: 1.5em;
+	visibility: hidden; /* ADDED */
 }
 
 #data_current_value {
@@ -134,6 +138,7 @@ canvas {
 	width: 100%;
 	float: left;
 	text-align: center;
+	visibility: hidden; /* ADDED */
 }
 
 ul#layer_list li {

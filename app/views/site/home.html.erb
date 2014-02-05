@@ -1,6 +1,6 @@
 <div class="home">
 
-<h1>Search</h1>
+<h1 style="height:20px;"></h1>
 
 	<div class='span1'></div>
 	<div class='span11'>
@@ -56,21 +56,92 @@
   $( "#y" ).val( 0 );
   $( "#z" ).val( 0 );
 
-$( "div.slider" ).click(function() {
-  var update = $( "div#data_current_coords" ).html();
-  var all = update.split(',');
-  var x = all[0].replace('[', '');
-  var num = parseInt(x);
-  $( "#x" ).val( num );
+$(document).ready(function(){
+    $('div#data_current_coords').bind('DOMNodeInserted DOMSubtreeModified DOMNodeRemoved', function(event) {
+		var update = $( "div#data_current_coords" ).html();
+		var all = update.split(',');
+		var x = all[0].replace('[', '');
+		var num = parseInt(x);
+		$( "#x" ).val( num );
 
-  var x = all[1].replace(' ', '');
-  var num = parseInt(x);
-  $( "#y" ).val( num );
+		var x = all[1].replace(' ', '');
+		var num = parseInt(x);
+		$( "#y" ).val( num );
 
-  var x = all[2].replace(' ', '');
-  x = x.replace(']', '');
-  var num = parseInt(x);
-  $( "#z" ).val( num );
-});
+		var x = all[2].replace(' ', '');
+		x = x.replace(']', '');
+		var num = parseInt(x);
+		$( "#z" ).val( num );
+    })
+})
+
+
+// $( "div.slider" ).click(function() {
+//   var update = $( "div#data_current_coords" ).html();
+//   var all = update.split(',');
+//   var x = all[0].replace('[', '');
+//   var num = parseInt(x);
+//   $( "#x" ).val( num );
+
+//   var x = all[1].replace(' ', '');
+//   var num = parseInt(x);
+//   $( "#y" ).val( num );
+
+//   var x = all[2].replace(' ', '');
+//   x = x.replace(']', '');
+//   var num = parseInt(x);
+//   $( "#z" ).val( num );
+// });
+
+// $( "canvas#sag_canvas" ).click(function() {
+//   var update = $( "div#data_current_coords" ).html();
+//   var all = update.split(',');
+//   var x = all[0].replace('[', '');
+//   var num = parseInt(x);
+//   $( "#x" ).val( num );
+
+//   var x = all[1].replace(' ', '');
+//   var num = parseInt(x);
+//   $( "#y" ).val( num );
+
+//   var x = all[2].replace(' ', '');
+//   x = x.replace(']', '');
+//   var num = parseInt(x);
+//   $( "#z" ).val( num );
+// });
+
+// $( "canvas#axial_canvas" ).click(function() {
+//   var update = $( "div#data_current_coords" ).html();
+//   var all = update.split(',');
+//   var x = all[0].replace('[', '');
+//   var num = parseInt(x);
+//   $( "#x" ).val( num );
+
+//   var x = all[1].replace(' ', '');
+//   var num = parseInt(x);
+//   $( "#y" ).val( num );
+
+//   var x = all[2].replace(' ', '');
+//   x = x.replace(']', '');
+//   var num = parseInt(x);
+//   $( "#z" ).val( num );
+// });
+
+// $( "canvas#cor_canvas" ).click(function() {
+//   var update = $( "div#data_current_coords" ).html();
+//   var all = update.split(',');
+//   var x = all[0].replace('[', '');
+//   var num = parseInt(x);
+//   $( "#x" ).val( num );
+
+//   var x = all[1].replace(' ', '');
+//   var num = parseInt(x);
+//   $( "#y" ).val( num );
+
+//   var x = all[2].replace(' ', '');
+//   x = x.replace(']', '');
+//   var num = parseInt(x);
+//   $( "#z" ).val( num );
+// });
 
 </script>
