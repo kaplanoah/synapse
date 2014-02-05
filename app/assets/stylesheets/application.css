@@ -23,9 +23,13 @@ h1 {
 	padding-bottom: 30px;
 }
 
-.navbar-inverse {
+#navbar {
 	background-color: #870700;
 	border: none;
+}
+
+#navbar a {
+	color: White;
 }
 
 .btn-default, .btn-default:hover {
@@ -39,6 +43,15 @@ h1 {
 
 .home {
 	text-align: center;
+}
+
+.home form {
+	float: right;
+	clear: right;
+}
+
+.home .span11 {
+	float: left;
 }
 
 input[type="number"] {
