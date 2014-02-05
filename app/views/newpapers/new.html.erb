@@ -38,18 +38,15 @@
     <label>Phone</label> <br>
     <%= p.text_field :phone %> <br><br>
 
-    <label class="coord1">Coordinates</label> <br>
-    <input class="coordinate coord1" name="coordinates[1][x]" placeholder="X" />
-	<input class="coordinate coord1" name="coordinates[1][y]" placeholder="Y" />
-	<input class="coordinate coord1" name="coordinates[1][z]" placeholder="Z" /><span class="glyphicon glyphicon-plus add1"></span><br>
+    <div class="coordinates">
 
-    <input class="coordinate coord2" name="coordinates[2][x]" placeholder="X" />
-	<input class="coordinate coord2" name="coordinates[2][y]" placeholder="Y" />
-	<input class="coordinate coord2" name="coordinates[2][z]" placeholder="Z" /><span class="glyphicon glyphicon-plus add2"></span><br>
+    <label>Coordinates</label> <br>
+    <input class="coordinate" id="coord1" name="coordinates[1][x]" placeholder="X" />
+	<input class="coordinate" id="coord1" name="coordinates[1][y]" placeholder="Y" />
+	<input class="coordinate" id="coord1" name="coordinates[1][z]" placeholder="Z" />
+	<span class="glyphicon glyphicon-plus add1"></span><br>
 
-    <input class="coordinate coord3" name="coordinates[3][x]" placeholder="X" />
-	<input class="coordinate coord3" name="coordinates[3][y]" placeholder="Y" />
-	<input class="coordinate coord3" name="coordinates[3][z]" placeholder="Z" /><span class="glyphicon glyphicon-plus add3"></span><br>
+	</div>
 
     <%= p.submit "Submit", :class => "btn btn-default" %> <br>
 
@@ -61,21 +58,16 @@
 
 <script>
 
-$( ".coord2" ).hide();
-$( ".add2" ).hide();
-$( ".coord3" ).hide();
-$( ".add3" ).hide();
+var num = 1
 
-$('.add1').click( function() {
-	$( ".coord2" ).show();
-	$( ".add2" ).show();
-	$( ".add1" ).hide();
-});
+$(document).on('click', 'div.coordinates span', function() {
+	num = num + 1
+	var field = '<input class="coordinate" name="coordinates[' + num + '][x]" placeholder="X" /><input class="coordinate" name="coordinates[' + num + '][y]" placeholder="Y" /><input class="coordinate" name="coordinates[' + num + '][z]" placeholder="Z" /><span class="glyphicon glyphicon-plus add' + num + '"></span><br>'
 
-$('.add2').click( function() {
-	$( ".coord3" ).show();
-	$( ".add3" ).show();
-	$( ".add2" ).hide();
+	$( ".coordinates" ).append(field);
+
+	var plus = ".add" + (num - 1).toString(); ;
+	$( plus ).hide();
 });
 
 </script>
