@@ -1,6 +1,6 @@
 Synapse::Application.routes.draw do
 
-	resources :users, :sessions
+	resources :users, :sessions, :newpapers
 
 	root to: 'site#home'
 
@@ -18,7 +18,8 @@ Synapse::Application.routes.draw do
 
 	get'/signin', to: 'sessions#new'
 
-
 	get '/viewertest', to: 'site#viewertest'
+
+	get '/papers/new', to: 'side#home', as: :add_paper
 
 end

@@ -11,16 +11,14 @@
 	<li>enter MNI coordinates</li>
 </ul>
 
-
-
 <br>
 
 <a href="#">What is a DOI?</a> <br>
-<a href="#">Converting to MNI</a> <br><br><br>
+<a href="#">Converting to MNI</a> <br>
 
-<%= form_for @newpaper do |p| %>
+<%= form_for(@newpaper) do |p| %>
 
-    <label>Title</label> <br>
+    <label class="margintop">Title</label> <br>
     <%= p.text_field :title %> <br><br>
 
     <label>Journal</label>  <br>
@@ -40,15 +38,44 @@
     <label>Phone</label> <br>
     <%= p.text_field :phone %> <br><br>
 
+    <label class="coord1">Coordinates</label> <br>
+    <input class="coordinate coord1" name="coordinates[1][x]" placeholder="X" />
+	<input class="coordinate coord1" name="coordinates[1][y]" placeholder="Y" />
+	<input class="coordinate coord1" name="coordinates[1][z]" placeholder="Z" /><span class="glyphicon glyphicon-plus add1"></span><br>
 
+    <input class="coordinate coord2" name="coordinates[2][x]" placeholder="X" />
+	<input class="coordinate coord2" name="coordinates[2][y]" placeholder="Y" />
+	<input class="coordinate coord2" name="coordinates[2][z]" placeholder="Z" /><span class="glyphicon glyphicon-plus add2"></span><br>
 
+    <input class="coordinate coord3" name="coordinates[3][x]" placeholder="X" />
+	<input class="coordinate coord3" name="coordinates[3][y]" placeholder="Y" />
+	<input class="coordinate coord3" name="coordinates[3][z]" placeholder="Z" /><span class="glyphicon glyphicon-plus add3"></span><br>
 
+    <%= p.submit "Submit", :class => "btn btn-default" %> <br>
 
-
-    <%= p.submit "Submit", :class => "btn btn-default" %> <br><br>
-
-    <p>Please contact <a href="mailto:noahkaplan4@gmail.com", target="_blank">Noah Kaplan</a> with any questions</p>
+    <p class="margintop">Please contact <a href="mailto:noahkaplan4@gmail.com", target="_blank">Noah Kaplan</a> with any questions</p>
 
 <% end %>
 
 </div>
+
+<script>
+
+$( ".coord2" ).hide();
+$( ".add2" ).hide();
+$( ".coord3" ).hide();
+$( ".add3" ).hide();
+
+$('.add1').click( function() {
+	$( ".coord2" ).show();
+	$( ".add2" ).show();
+	$( ".add1" ).hide();
+});
+
+$('.add2').click( function() {
+	$( ".coord3" ).show();
+	$( ".add3" ).show();
+	$( ".add2" ).hide();
+});
+
+</script>

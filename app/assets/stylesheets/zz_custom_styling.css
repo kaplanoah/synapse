@@ -13,7 +13,7 @@ body {
 	color: White;
 }
 
-.btn-default, .btn-default:hover {
+.btn-default, .btn-default:hover, .btn-default:active, .btn-default:focus {
 	background-color: #870700;
 	border: none;
 	color: White;
@@ -44,4 +44,29 @@ body {
 
 .newpaper a {
 	color: #870700;
+}
+
+.newpaper .coordinate {
+	height: 40px;
+	width: 43px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-right: -5px;
+	outline: none;
+}
+
+.glyphicon-plus {
+	position: relative;
+	left: 17px;
+	top: 2px;
+	font-size: 18px;
+	opacity: 0.4;
+}
+
+.glyphicon-plus:hover {
+	opacity: 0.6;
+}
+
+.newpaper .margintop {
+	margin-top: 30px;
 }

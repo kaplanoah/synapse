@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204014304) do
+ActiveRecord::Schema.define(version: 20140205192047) do
+
+  create_table "newpapers", force: true do |t|
+    t.integer  "x"
+    t.integer  "y"
+    t.integer  "z"
+    t.text     "doi"
+    t.text     "coordinatesystem"
+    t.text     "journal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "author"
+    t.string   "email"
+    t.string   "phone"
+  end
 
   create_table "papers", force: true do |t|
     t.integer  "x"
@@ -22,7 +37,6 @@ ActiveRecord::Schema.define(version: 20140204014304) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "journal"
-    t.text     "title"
   end
 
   create_table "titles", force: true do |t|
