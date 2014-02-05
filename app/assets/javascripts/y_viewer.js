@@ -1317,7 +1317,7 @@
       if (!this.viewSettings.labelsEnabled) {
         return;
       }
-      fontSize = Math.round(15);  // this.height / 15
+      fontSize = Math.round(14);  // this.height / 15
       this.context.fillStyle = 'white';
       this.context.font = "" + fontSize + "px Helvetica";
       this.context.textAlign = 'left';
