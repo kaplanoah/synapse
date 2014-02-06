@@ -8,8 +8,8 @@
 
 
 
-file = ".gitignore"
+# file = ".gitignore"
 
-CSV.foreach(file) do |row|
-	Paper.create :x => row[0], :y => row[1], :z => row[2], :doi => row[3], :journal => row[4], :coordinatesystem => row[5], :zscore => row[6]
-end
+# CSV.foreach(file) do |row|
+# 	Paper.create :x => row[0], :y => row[1], :z => row[2], :doi => row[3], :journal => row[4], :coordinatesystem => row[5], :zscore => row[6]
+# end
