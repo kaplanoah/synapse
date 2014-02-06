@@ -32,6 +32,8 @@ class PapersController < ApplicationController
 
 		@title = "Title"
 		@results = Paper.where( :x => (x-range..x+range), :y => (y-range..y+range), :z => (z-range..z+range) )
+		@x, @y, @z, @range = x, y, z, range
+		@search = Search.new
 	end
 
 end

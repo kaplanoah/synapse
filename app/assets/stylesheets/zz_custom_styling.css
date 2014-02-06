@@ -13,6 +13,15 @@ body {
 	color: White;
 }
 
+a {
+	color: #870700;
+}
+
+.results a {
+	font-weight: bold;
+	font-style: italic;
+}
+
 .btn-default, .btn-default:hover, .btn-default:active, .btn-default:focus {
 	background-color: #870700;
 	border: none;
@@ -40,10 +49,6 @@ body {
 
 .results p {
 	margin-bottom: 40px;
-}
-
-.newpaper a {
-	color: #870700;
 }
 
 .newpaper .coordinate {

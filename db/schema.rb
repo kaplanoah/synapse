@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205192047) do
+ActiveRecord::Schema.define(version: 20140205233511) do
 
   create_table "newpapers", force: true do |t|
     t.integer  "x"
@@ -38,6 +38,18 @@ ActiveRecord::Schema.define(version: 20140205192047) do
     t.datetime "updated_at"
     t.text     "journal"
   end
+
+  create_table "searches", force: true do |t|
+    t.string   "x"
+    t.string   "y"
+    t.string   "z"
+    t.string   "range"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "searches", ["user_id"], name: "index_searches_on_user_id"
 
   create_table "titles", force: true do |t|
     t.text     "doi"

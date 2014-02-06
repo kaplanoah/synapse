@@ -1,6 +1,6 @@
 Synapse::Application.routes.draw do
 
-	resources :users, :sessions, :newpapers
+	resources :users, :sessions, :newpapers, :searches
 
 	root to: 'site#home'
 
@@ -10,7 +10,7 @@ Synapse::Application.routes.draw do
 
 	get 'papers/index', to: 'papers#index'
 
-	post 'papers/search', to: 'papers#search', as: :search
+	post 'papers/search', to: 'papers#search', as: :user_search
 
 	get '/signup', to: 'users#new'
 

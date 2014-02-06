@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-<%= form_for :search, url: search_path do |s| %>
+<%= form_for :search, url: user_search_path do |s| %>
 
 	<%= s.number_field :x, id: "x" %>
 
@@ -42,7 +42,7 @@
 
 	<span class="voxels" id="jstester"><%= s.label "Include coordinates +/-" %>	
 <div class="styled-select">
-	<%= select_tag(:range, options_for_select([['0', 0], ['1', 1], ['2', 2], ['3', 3]])) %></div></span> <br><br>
+	<%= select_tag(:range, options_for_select([['0', 0], ['1', 1], ['2', 2], ['3', 3]]), id: "range") %></div></span> <br><br>
 
 	<%= s.submit 'Search', class: "btn btn-default" %>
 
@@ -55,6 +55,7 @@
   $( "#x" ).val( 0 );
   $( "#y" ).val( 0 );
   $( "#z" ).val( 0 );
+  $( "#range" ).val( 0 );
 
 $(document).ready(function(){
     $('div#data_current_coords').bind('DOMNodeInserted DOMSubtreeModified DOMNodeRemoved', function(event) {

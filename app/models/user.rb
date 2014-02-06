@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+	has_many :searches
+
 	has_secure_password
 
 	before_create :create_remember_token

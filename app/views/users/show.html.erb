@@ -1,5 +1,14 @@
 <h2>User Profile</h2> <br>
 
-<%= @user.firstname %><br>
+<%= @user.firstname %>
 <%= @user.lastname %><br>
-<%= @user.email %>
+<%= @user.email %> <br><br>
+
+<h4>Saved Searches</h4>
+
+<% @user.searches.each do |s| %>
+	<%= s.x %>
+	<%= s.y %>
+	<%= s.z %> <br>
+	<span>+/- </span><%= s.range %> <br><br>
+<% end %>

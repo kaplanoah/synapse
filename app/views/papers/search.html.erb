@@ -3,8 +3,21 @@
 <h1>Results</h1>
 
 <% if @results.empty? %>
-<p>No articles</p>
+	<p>No articles</p>
+<% else %>
+		
+	<%= form_for(@search) do |s| %>
+		<%= s.text_field :x, value: @x %>
+		<%= s.text_field :y, value: @y %>
+		<%= s.text_field :z, value: @z %>
+		<%= s.text_field :range, value: @range %>
+		<%= s.submit "Save Search" %>
+	<% end %>
+
+
+
 <% end %>
+
 
 <% @results.each do |r| %>
 
