@@ -157,3 +157,52 @@ a {
 	opacity: 0.8;
 }
 
+#searchboxes {
+	margin-bottom: 100px;
+}
+
+@media(max-width: 1200px) {
+
+	#searchboxes {
+		position: relative;
+		top: -220px;
+		right: 160px;
+	}
+
+	#mninotice {
+		display: none;
+	}
+}
+
+@media(max-width: 991px) {
+
+	#searchboxes {
+		position: relative;
+		top: -220px;
+		left: 55px;
+	}
+}
+
+@media(max-width: 725px) {
+
+	#searchboxes {
+		position: relative;
+		top: 80px;
+		left: 55px;
+		float: left;
+	}
+
+	#view_sagittal {
+		position: relative;
+		bottom: 0px;
+	}
+}
+
+@media(max-width: 624px) {
+
+	#view_sagittal {
+		margin-top: 40px;
+	}
+}
+
+
