@@ -1,7 +1,7 @@
 body {
   padding-top: 80px;
-  background-color: #FAF8F2;
-  margin-bottom: 50px;
+/*  background-color: #FAF8F2;
+*/  margin-bottom: 50px;
   margin-right: 0;
 }
 
@@ -159,6 +159,17 @@ a {
 
 #searchboxes {
 	margin-bottom: 100px;
+}
+
+.nervecell {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.home {
+	padding-top: 200px;
 }
 
 @media(max-width: 1200px) {
