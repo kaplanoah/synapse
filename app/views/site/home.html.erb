@@ -28,6 +28,8 @@
 		</div>
 	</div>
 
+<p id="mninotice">ALL<br>COORDINATES<br>IN MNI</p>
+
 <%= form_for :search, url: user_search_path do |s| %>
 
 	<%= s.number_field :x, id: "x" %>
@@ -39,6 +41,7 @@
 	<%= s.label :x, class: "coordinatelabel" %>
 	<%= s.label :y, class: "coordinatelabel" %>
 	<%= s.label :z, class: "coordinatelabel" %>  <br><br>
+
 
 	<span class="voxels" id="jstester"><%= s.label "Include coordinates +/-" %>	
 <div class="styled-select">

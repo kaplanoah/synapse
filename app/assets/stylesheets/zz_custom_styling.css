@@ -2,6 +2,7 @@ body {
   padding-top: 80px;
   background-color: #FAF8F2;
   margin-bottom: 50px;
+  margin-right: 0;
 }
 
 .navbar-inverse {
@@ -124,5 +125,16 @@ a {
 
 .profile #range {
 	display: hidden;
+}
+
+#mninotice {
+	position: relative;
+	top: 45px;
+	left: 446px;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 9px;
+	text-align: left;
+	opacity: 0.8;
 }
 

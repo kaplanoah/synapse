@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205233511) do
+ActiveRecord::Schema.define(version: 20140206035548) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "newpapers", force: true do |t|
     t.integer  "x"
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140205233511) do
     t.text     "coordinatesystem"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "journal"
+    t.string   "journal"
   end
 
   create_table "searches", force: true do |t|
@@ -49,11 +52,11 @@ ActiveRecord::Schema.define(version: 20140205233511) do
     t.integer  "user_id"
   end
 
-  add_index "searches", ["user_id"], name: "index_searches_on_user_id"
+  add_index "searches", ["user_id"], name: "index_searches_on_user_id", using: :btree
 
   create_table "titles", force: true do |t|
-    t.text     "doi"
-    t.text     "title"
+    t.string   "title"
+    t.string   "doi"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,6 +71,6 @@ ActiveRecord::Schema.define(version: 20140205233511) do
     t.string   "remember_token"
   end
 
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
