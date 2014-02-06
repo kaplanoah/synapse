@@ -4,18 +4,14 @@
 
 <% if @results.empty? %>
 	<p>No articles</p>
-<% else %>
-		
+<% else %>	
 	<%= form_for(@search) do |s| %>
-		<%= s.text_field :x, value: @x %>
-		<%= s.text_field :y, value: @y %>
-		<%= s.text_field :z, value: @z %>
-		<%= s.text_field :range, value: @range %>
-		<%= s.submit "Save Search" %>
+		<%= s.hidden_field :x, value: @x %>
+		<%= s.hidden_field :y, value: @y %>
+		<%= s.hidden_field :z, value: @z %>
+		<%= s.hidden_field :range, value: @range %>
+		<%= s.submit "Save Search", class: "btn btn-default" %>
 	<% end %>
-
-
-
 <% end %>
 
 

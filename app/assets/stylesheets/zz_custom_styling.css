@@ -51,6 +51,22 @@ a {
 	margin-bottom: 40px;
 }
 
+.results form {
+	position: relative;
+	top: -88px;
+	left: 161px;
+	margin-bottom: -55px;
+}
+
+.results input[type="submit"] {
+	font-size: 13px;
+	height: 31px;
+	width: 100px;
+	padding: 0;
+	padding-top: 1px;
+	text-align: center;
+}
+
 .newpaper .coordinate {
 	height: 40px;
 	width: 43px;
@@ -79,3 +95,34 @@ a {
 .newpaper .margintop {
 	margin-top: 30px;
 }
+
+.profile table {
+	border-collapse:separate;
+	border-spacing: 0 15px;
+}
+
+.profile table tr {
+	background-color: White;
+}
+
+.profile table td {
+	padding: 10px 14px;
+}
+
+.profile .first {
+	border-radius: 1px 0 0 1px;
+	padding-right: 10px;
+}
+
+.profile .middle {
+	padding-right: 10px;
+}
+
+.profile .last {
+	border-radius: 0 1px 1px 0;
+}
+
+.profile #range {
+	display: hidden;
+}
+
