@@ -15,28 +15,24 @@
 <table>
 	<% @user.searches.each do |s| %>
 		<tr>
-		<td class="first">
-			<%= s.x %>,
-			<%= s.y %>,
-			<%= s.z %>
-		</td>
-		<td class="last">
-			<span>+/- </span><%= s.range %>
-		</td>
+			<td class="first">
+				<%= s.x %>,
+				<%= s.y %>,
+				<%= s.z %>
+			</td>
+			<td class="middle">
+				<span>+/- </span><%= s.range %>
+			</td>
+			<td class="last">
+				<%= form_for :search, url: user_search_path do |f| %>
+				<%= f.hidden_field :x, id: "x", value: s.x %>
+				<%= f.hidden_field :y, id: "y", value: s.y %>
+				<%= f.hidden_field :z, id: "z", value: s.z %>
+				<%= select_tag(:range, options_for_select([["#{s.range}", s.range]]), id: "range", type: "hidden" ) %>
+				<%= f.submit 'Search', class: "btn btn-default" %>
+			</td>
+			<% end %>
 		</tr>
-		<%= form_for :search, url: user_search_path do |f| %>
-
-		<%= f.hidden_field :x, id: "x", value: s.x %>
-
-		<%= f.hidden_field :y, id: "y", value: s.y %>
-
-		<%= f.hidden_field :z, id: "z", value: s.z %>
-
-		<%= select_tag(:range, options_for_select([["#{s.range}", s.range]]), id: "range", type: "hidden" ) %>
-
-		<%= f.submit 'Search', class: "btn btn-default" %>
-
-		<% end %>
 	<% end %>
 </table>
 
