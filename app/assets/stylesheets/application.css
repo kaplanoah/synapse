@@ -47,9 +47,8 @@ input[type="number"] {
 }
 
 .coordinatelabel {
-	margin: auto 52px;
+	margin: 10px 52px 12px 52px;
 	font-size: 18px;
-	margin-top: 10px;
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {

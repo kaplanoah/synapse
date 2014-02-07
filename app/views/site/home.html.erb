@@ -43,13 +43,13 @@
 		<%= s.label :y, class: "coordinatelabel" %>
 		<%= s.label :z, class: "coordinatelabel" %>  <br><br>
 
-		<span class="voxels" id="jstester"><%= s.label "Include coordinates +/-" %>	
+		<span class="voxels"><%= s.label " include coordinates +/-", id: "coordinatelabel" %>	
 			<div class="styled-select">
 				<%= select_tag(:range, options_for_select([["0", 0], ["1", 1], ["2", 2], ["3", 3]]), id: "range") %>
 			</div>
 		</span> <br><br>
 
-		<%= s.submit "Search", class: "btn btn-default" %>
+		<%= s.submit "SEARCH", class: "btn btn-default" %>
 
 	<% end %>
 
