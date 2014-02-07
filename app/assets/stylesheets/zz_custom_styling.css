@@ -279,6 +279,10 @@ a, a:hover {
 	width: 260px;
 }
 
+.results {
+	margin-left: 37px;
+}
+
 .results a {
 	padding: 35px auto;
 }
