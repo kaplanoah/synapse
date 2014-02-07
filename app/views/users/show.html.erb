@@ -2,13 +2,11 @@
 
 <div class="profile">
 
-<h2>Profile</h2> <br>
+<h2>Saved Searches</h2>
 
 <%= @user.firstname %>
 <%= @user.lastname %><br>
 <%= @user.email %> <br><br>
-
-<h4>Saved Searches</h4>
 
 <% if @user.searches.empty? %>
 	<p>None</p>
