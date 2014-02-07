@@ -1,5 +1,5 @@
 #left {
-	width: 265px;
+	width: 253px; /* from 265px ADDED */
 	float: left;
 }
 
@@ -16,7 +16,7 @@
 #view_coronal {
   width: 280px;
   height: 220px;
-  margin-bottom: 20px; }
+  margin-bottom: 5px; } /* from 20px ADDED */
 
 #view_sagittal {
   width: 264px;

@@ -1,6 +1,8 @@
-<div class="home">
+<div class="container home">
 
-<img src="<%= asset_path( 'nervecell3.jpeg' ) %>" class="nervecell" />
+<div class="row">
+
+<img src="<%= asset_path( 'nervecell10.jpeg' ) %>" class="nervecell" />
 
 	<div class="brain">
 		<div id="left">
@@ -53,16 +55,40 @@
 
 	</div>
 
+	<div class="pointer"></div>
+	<div class="redbar"></div>
+
+</div>
+<div class="row">
+
+	<div class="about">
+
+		<h4>Synapse connects neuroscientists not by where their research began, but by where it ended up.</h4>
+		<h4>Hyperlocal, search by voxel, not topic</h4>
+
+	</div>
+
+</div>
+
 </div>
 
 <script>
 
 var height = $(window).height();
+var width = $(window).width();
 
 $( "#x" ).val( 0 );
 $( "#y" ).val( 0 );
 $( "#z" ).val( 0 );
 $( "#range" ).val( 0 );
+$( ".pointer" ).css({left: (width / 2) - 10});
+
+$( window ).resize(function() {
+	var width = $(window).width();
+	var height = $(window).height();
+
+	$( ".pointer" ).css({left: (width / 2) - 10});
+});
 
 $(document).ready(function(){
     $( "div#data_current_coords" ).bind( "DOMNodeInserted DOMSubtreeModified DOMNodeRemoved", function(event) {
