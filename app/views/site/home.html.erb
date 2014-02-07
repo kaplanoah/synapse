@@ -63,10 +63,17 @@
 
 	<div class="about">
 
-		<h4>Synapse connects neuroscientists not by where their research began, but by where it ended up.</h4>
-		<h4>Hyperlocal, search by voxel, not topic</h4>
+		<h4>Synapse connects neuroscientists not by where their<br>research began, but by where it ended up.</h4>
 
+		<div class="subabout">
+		<h5>Find neuroscience research articles in a hyper-local search of the human brain. Synapse flips the traditional search by beginning with voxels, not topics.</h5>
+
+	<h6>130,000 coordinates from 4,000 articles. More data coming soon.</h6>
+		</div>
 	</div>
+
+	<img src="<%= asset_path( 'braingraphic3.jpeg' ) %>" class="braingraphic" />
+	<div class="redbarbottom"></div>
 
 </div>
 
@@ -82,6 +89,7 @@ $( "#y" ).val( 0 );
 $( "#z" ).val( 0 );
 $( "#range" ).val( 0 );
 $( ".pointer" ).css({left: (width / 2) - 10});
+$( ".redbarbottom").css({width: width})
 
 $( window ).resize(function() {
 	var width = $(window).width();

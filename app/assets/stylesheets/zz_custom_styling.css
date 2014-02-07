@@ -1,7 +1,6 @@
 body {
 /*  background-color: #FAF8F2; */
-  margin-bottom: 50px;
-  margin-right: 0;
+  margin: 0;
 }
 
 .navbar-inverse {
@@ -205,12 +204,59 @@ a, a:hover {
 
 .about {
 	margin-top: 200px;
+	height: 85px;
 }
 
 #coordinatelabel {
 	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
 	font-weight: 600;
 	font-size: 16px;
+}
+
+.braingraphic {
+	height: 720px;
+	padding-top: 30px;
+	position: relative;
+	left: 120px;
+}
+
+.redbarbottom {
+	background-color: #940000;
+	width: 100%;
+	height: 62px;
+	margin-top: -15px;
+	position: relative;
+	left: -70px;
+	z-index: 1;
+}
+
+.subabout {
+	padding-left: 15px;
+	width: 240px;
+	position: relative;
+	top: 170px;
+	text-align: left;
+}
+
+.home h4, .home h5, .home h6 {
+	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
+}
+
+.home h4 {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.home h5, .home h6 {
+	line-height: 35px;
+}
+
+.home h6 {
+	padding-right: 30px;
+	font-style: italic;
+	font-size: 14px;
+	margin-top: 40px;
+	width: 260px;
 }
 
 @media(max-width: 1200px) {
