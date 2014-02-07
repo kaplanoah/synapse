@@ -17,11 +17,15 @@ module SessionsHelper
 	# Ensures access to create/edit functions on if signed in.
 	def signed_in_user
 	    unless signed_in?
+	    	action = params[:commit]
+	    	if action = "Save Search"
+	    		flash[:error] = "Please sign in to save your search"
+	    	end
 	        # If not signed in, save current location in session object
 	        # to be able to redirect after successful sign in.
 	        session[:return_to] = request.url
 	        # prompt sign in page
-	        redirect_to signin_url, notice: "Please sign in"
+	        redirect_to signin_url
 	    end
 	end
 

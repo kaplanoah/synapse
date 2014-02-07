@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).on('ready page:load',function() {
 
 	viewer = new Viewer('#layer_list', '.layer_settings');
 	viewer.addView('#view_axial', Viewer.AXIAL);

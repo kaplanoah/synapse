@@ -1,5 +1,9 @@
 <%= render :partial => "shared/navbar" %>
 
+<div class="container">
+<div class="row">
+<div class="col-xs-4 col-xs-offset-1">
+
 <h2>Sign up</h2> <br>
 
 <%= form_for(@user) do |f| %>
@@ -14,20 +18,34 @@
     </ul>
     <% end %>
 
-    <%= f.label :firstname %> <br>
-    <%= f.text_field :firstname %> <br> <br>
+    <div class="form-group">
+        <%= f.label :firstname %> <br>
+        <%= f.text_field :firstname, class: "form-control" %> <br> <br>
+    </div>
 
-    <%= f.label :lastname %> <br>
-    <%= f.text_field :lastname %> <br> <br>
+    <div class="form-group">
+        <%= f.label :lastname %> <br>
+        <%= f.text_field :lastname, class: "form-control" %> <br> <br>
+    </div>
 
-    <%= f.label :email %> <br>
-    <%= f.text_field :email %> <br> <br>
+    <div class="form-group">
+        <%= f.label :email %> <br>
+        <%= f.text_field :email, class: "form-control" %> <br> <br>
+    </div>
 
-    <%= f.label :password %> <br>
-    <%= f.password_field :password %> <br> <br>
+    <div class="form-group">
+        <%= f.label :password %> <br>
+        <%= f.password_field :password, class: "form-control" %> <br> <br>
+    </div>
 
-    <%= f.label :password_confirmation, "Confirm password" %> <br>
-    <%= f.password_field :password_confirmation %> <br> <br>
+    <div class="form-group">
+        <%= f.label :password_confirmation, "Confirm password" %> <br>
+        <%= f.password_field :password_confirmation, class: "form-control" %> <br> <br>
+    </div>
 
-    <%= f.submit "Create account" %>
+    <%= f.submit "Create account", class: "btn btn-default" %>
 <% end %>
+
+</div>
+</div>
+</div>

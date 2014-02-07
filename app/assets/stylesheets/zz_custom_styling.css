@@ -4,6 +4,11 @@ body {
   margin-top: 80px;
 }
 
+h2 {
+	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
+	font-weight: bold; 
+}
+
 .navbar-inverse {
 	background-color: #940000;
 	border: none;
@@ -274,6 +279,50 @@ a, a:hover {
 
 .results a {
 	padding: 35px auto;
+}
+
+.profile h4 {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.error {
+	color: #940000;
+}
+
+.form-group {
+	margin-bottom: -15px;
+}
+
+.form-control {
+	border-radius: 2px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+		border: 1px solid Black;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-moz-transition: none;
+		-webkit-transition: none;
+}
+
+
+.synapsehome {
+	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
+	color: White;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 26px;
+	position: absolute;
+	top: 12px;
+	left: 23px;	
+	letter-spacing: 1.3px;
+}
+
+.synapsehome:hover {
+	color: White;
 }
 
 @media(max-width: 1200px) {
