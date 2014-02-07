@@ -327,6 +327,24 @@ input[type="text"]:focus, input[type="password"]:focus {
 	color: White;
 }
 
+.glyphicon-user {
+	color: White;
+	font-size: 22px;
+	position: absolute;
+	top: 22px;
+	right: 85px;
+}
+
+.home .signin, .home .sigin:hover {
+	position: absolute;
+	top: 22px;
+	right: 30px;
+	color: White;
+	text-decoration: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+}
+
 @media(max-width: 1200px) {
 
 	#searchboxes {
