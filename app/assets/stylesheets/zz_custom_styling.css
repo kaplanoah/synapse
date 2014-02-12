@@ -372,6 +372,14 @@ input[type="text"]:focus, input[type="password"]:focus {
 	}*/
 }
 
+@media(max-width: 1230px) {
+
+	.navbar>.container .navbar-brand {
+		margin-left: 0;
+	}
+}
+
+
 @media(max-width: 991px) {
 
 /*	#searchboxes {
