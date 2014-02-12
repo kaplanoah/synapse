@@ -359,9 +359,9 @@ input[type="text"]:focus, input[type="password"]:focus {
 	margin-left: -30px;
 }
 
-/*@media(max-width: 1200px) {
+@media(max-width: 1200px) {
 
-	#searchboxes {
+/*	#searchboxes {
 		position: relative;
 		top: -220px;
 		right: 160px;
@@ -369,43 +369,43 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 	#mninotice {
 		display: none;
-	}
+	}*/
 }
 
 @media(max-width: 991px) {
 
-	#searchboxes {
+/*	#searchboxes {
 		position: relative;
 		top: -220px;
 		left: 55px;
-	}
+	}*/
 }
 
 @media(max-width: 725px) {
 
-	#searchboxes {
+/*	#searchboxes {
 		position: relative;
 		top: 80px;
 		left: 55px;
 		float: left;
-	}
+	}*/
 
 	#view_sagittal {
 		position: relative;
 		bottom: 0px;
 	}
 
-	.redbar, .pointer {
+/*	.redbar, .pointer {
 		display: absolute;
 		top: 1050px;
-	}
+	}*/
 }
 
 @media(max-width: 624px) {
 
-	#view_sagittal {
+/*	#view_sagittal {
 		margin-top: 40px;
-	}
+	}*/
 }
 
 @media(max-height: 655px) {
@@ -415,5 +415,5 @@ input[type="text"]:focus, input[type="password"]:focus {
 		top: 650px;
 	}
 }
-*/
+
 
