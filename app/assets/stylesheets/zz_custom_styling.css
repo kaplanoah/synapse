@@ -5,6 +5,10 @@ body {
   max-width: 1200px;
 }
 
+.container {
+	width: 1155px;
+}
+
 h2 {
 	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
 	font-weight: bold; 
@@ -172,9 +176,10 @@ a, a:hover {
 }
 
 #mninotice {
-	position: relative;
-	top: 77px;
-	left: 455px;
+	width: 100px;
+	position: absolute;
+	top: 180px;
+	left: 1070px;
 	font-weight: normal;
 	font-style: italic;
 	font-size: 8px;
@@ -189,9 +194,9 @@ a, a:hover {
 
 .nervecell {
 	position: absolute;
-	top: -172px;
+	top: 0px;
 	left: 0;
-	width: 100%;
+	width: 1280px;
 }
 
 .home {
@@ -202,7 +207,7 @@ a, a:hover {
 .redbar {
 	background-color: #940000;
 	position: absolute;
-	bottom: -20px;
+	bottom: -25px;
 	left: 0;
 	right: 0;
 	height: 62px;
@@ -216,7 +221,7 @@ a, a:hover {
    border-left: 10px solid transparent; 
    border-right: 10px solid transparent;
    position: absolute;
-   bottom: 29px;
+   bottom: 24px;
    left: 500px;
    z-index: 1;
 }
@@ -245,12 +250,12 @@ a, a:hover {
 	height: 62px;
 	margin-top: -15px;
 	position: relative;
-	left: -30px;
+	left: -38px;
 	z-index: 1;
 }
 
 .subabout {
-	padding-left: 15px;
+	padding-left: 40px;
 	width: 240px;
 	position: relative;
 	top: 170px;
@@ -265,6 +270,7 @@ a, a:hover {
 	font-size: 30px;
 	font-weight: 600;
 	margin: auto 160px;
+	line-height: 39px;
 }
 
 .home h5, .home h6 {
@@ -349,7 +355,11 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-size: 15px;
 }
 
-@media(max-width: 1200px) {
+.navbar>.container .navbar-brand {
+	margin-left: -30px;
+}
+
+/*@media(max-width: 1200px) {
 
 	#searchboxes {
 		position: relative;
@@ -405,5 +415,5 @@ input[type="text"]:focus, input[type="password"]:focus {
 		top: 650px;
 	}
 }
-
+*/
 
