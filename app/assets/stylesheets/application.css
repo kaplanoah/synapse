@@ -137,3 +137,34 @@ input[type=number]::-webkit-inner-spin-button:after {
 #data_current_coords {
 	display: hidden;
 }
+
+.redbarbottom p {
+  color: White;
+  padding: 0;
+  padding-top: 4px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.redbarbottom a, .redbarbottom a:hover {
+  color: White;
+  text-decoration: underline;
+}
+
+.redbarbottom .left {
+  float: left;
+  padding-top: 23px;
+  padding-left: 20px;
+}
+
+.redbarbottom .right {
+  float: right;
+  clear: right;
+  padding-right: 20px;
+}
+
+.redbarbottom .top {
+  padding-top: 12px;
+}
+
+
