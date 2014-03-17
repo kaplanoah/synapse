@@ -8,7 +8,7 @@ Synapse allows neuroscientists to search for articles by selecting or entering a
 
 Synapse uses two main models: papers and titles. Papers contain X, Y and Z coordinates, the journal of the article, and a digital object identifier (DOI). Every paper has a unique DOI, such as 10.1016/j.neuroimage.2008.02.055. The data for papers comes from the [Neurosynth project](http://neurosynth.org/).
 
-Titles contain the title of articles and their DOI. Titles were found by using the DOI to create a link to a page that displayed the title and abstract of an article ('doi.org/<DOI>''). That url would inevitably be a redirect, so HTTPClient was used to find the final url. Nokogiri parsed the page and gave the title of the article.
+Titles contain the title of articles and their DOI. Titles were found by using the DOI to create a link to a page that displayed the title and abstract of an article ('doi.org/<DOI>'). That url would inevitably be a redirect, so HTTPClient was used to find the final url. Nokogiri parsed the page and gave the title of the article.
 
 All data in Synapse uses the MNI coordinate system.
 
