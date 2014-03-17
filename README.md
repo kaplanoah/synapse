@@ -22,6 +22,7 @@ Online: visit [searchsynapse.herokuapp.com](http://searchsynapse.herokuapp.com/)
 
 Locally: fork and clone app. From terminal, in app's directory, run:
 
+    bundle install
     rails s
 
 In web browser, visit:
