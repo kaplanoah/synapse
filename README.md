@@ -18,7 +18,7 @@ The brain model also comes from the Neurosynth Project. Their example code is on
 
 ### Launch app
 
-Online: [searchsynapse.herokuapp.com](visit http://searchsynapse.herokuapp.com/)
+Online: visit [searchsynapse.herokuapp.com](http://searchsynapse.herokuapp.com/)
 
 Locally: fork and clone app. From terminal, in app's directory, run:
 
@@ -27,4 +27,3 @@ Locally: fork and clone app. From terminal, in app's directory, run:
 In web browser, visit:
 
     http://localhost:3000/
-
