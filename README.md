@@ -18,8 +18,13 @@ The brain model also comes from the Neurosynth Project. Their example code is on
 
 ### Launch app
 
+Online: [searchsynapse.herokuapp.com](visit http://searchsynapse.herokuapp.com/)
+
 Locally: fork and clone app. From terminal, in app's directory, run:
 
     rails s
 
-Online: [searchsynapse.herokuapp.com](visit http://searchsynapse.herokuapp.com/)
+In web browser, visit:
+
+    http://localhost:3000/
+
