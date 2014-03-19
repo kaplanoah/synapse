@@ -10,14 +10,14 @@ body {
 }
 
 h2 {
-	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
+	font-family: Arial, sans-serif; /*'Open Sans', Arial, 'Noto Sans', sans-serif;*/
 	font-weight: bold; 
 }
 
 .navbar-inverse {
 	background-color: #940000;
 	border: none;
-	font-family: 'Source Sans Pro', Arial, 'Noto Sans', sans-serif;
+	font-family: Arial, sans-serif; /*'Source Sans Pro', Arial, 'Noto Sans', sans-serif;*/
 	font-weight: 300;
 	font-size: 16px;
 }
@@ -50,7 +50,7 @@ a, a:hover {
 	margin-top: 15px;
 	padding: 9px 22px;
 	font-size: 16px;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: sans-serif; /*'Source Sans Pro', sans-serif;*/
 	font-weight: 300;
 	letter-spacing: 1px;
 }
@@ -232,7 +232,7 @@ a, a:hover {
 }
 
 #coordinatelabel {
-	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
+	font-family: Arial, sans-serif; /*'Open Sans', Arial, 'Noto Sans', sans-serif;*/
 	font-weight: 600;
 	font-size: 16px;
 }
@@ -263,7 +263,7 @@ a, a:hover {
 }
 
 .home h4, .home h5, .home h6 {
-	font-family: 'Open Sans', Arial, 'Noto Sans', sans-serif;
+	font-family: Arial, sans-serif; /*'Open Sans', Arial, 'Noto Sans', sans-serif;*/
 }
 
 .home h4 {
@@ -322,7 +322,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 
 .synapsehome {
-	font-family: 'Noto Sans', Arial, 'Noto Sans', sans-serif;
+	font-family: Arial, sans-serif; /*'Noto Sans', Arial, 'Noto Sans', sans-serif;*/
 	color: White;
 	font-weight: 300;
 	font-style: italic;
@@ -351,7 +351,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 	right: 30px;
 	color: White;
 	text-decoration: none;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: sans-serif; /*'Source Sans Pro',*/
 	font-size: 15px;
 }
 
