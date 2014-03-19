@@ -6,7 +6,7 @@ Synapse::Application.routes.draw do
 
 	get '/home', to: 'site#home'
 
-	get 'papers/index', to: 'papers#index'
+	# get 'papers/index', to: 'papers#index'
 
 	post 'papers/search', to: 'papers#search', as: :user_search
 

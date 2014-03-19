@@ -1,28 +1,28 @@
 class PapersController < ApplicationController
 
 	def index
-		# @papers = Paper.all
+		@papers = Paper.all
 
-		# @papers.each do |p|
-		# 	begin
-		# 		if ( p.title.nil? ) && ( p.journal == "Cerebral Cortex" || p.journal == "NeuroImage" || p.journal == "Brain"
-		# 			@url = "http://doi.org/#{p.doi}" )
+		@papers.each do |p|
+			begin
+				if ( p.title.nil? ) && ( p.journal == "Cerebral Cortex" || p.journal == "NeuroImage" || p.journal == "Brain"
+					@url = "http://doi.org/#{p.doi}" )
 
-		# 			httpc = HTTPClient.new
-		# 			resp = httpc.get(@url)
-		# 			resp = resp.header['Location']
+					httpc = HTTPClient.new
+					resp = httpc.get(@url)
+					resp = resp.header['Location']
 
-		# 			open(@url) do |resp|
-		# 				@link = resp.base_uri.to_s
-		# 			end
+					open(@url) do |resp|
+						@link = resp.base_uri.to_s
+					end
 
-		# 			p.update_attribute(:title, Nokogiri::HTML::Document.parse(HTTParty.get(@link).body).title)
-		# 		end
-		# 	rescue
-		# 		p.update_attribute(:title, "Title not available")
-		# 	end
-		# end
-		# render text: "Done!"
+					p.update_attribute(:title, Nokogiri::HTML::Document.parse(HTTParty.get(@link).body).title)
+				end
+			rescue
+				p.update_attribute(:title, "Title not available")
+			end
+		end
+		render text: "Done!"
 	end
 
 	def search
