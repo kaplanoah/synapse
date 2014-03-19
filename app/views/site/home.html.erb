@@ -92,9 +92,6 @@
 var height = $(window).height();
 var width = $(window).width();
 
-$( "#x" ).val( 0 );
-$( "#y" ).val( 0 );
-$( "#z" ).val( 0 );
 $( "#range" ).val( 0 );
 $( ".pointer" ).css({left: (width / 2) - 10});
 $( ".redbarbottom").css({width: width})
@@ -107,22 +104,36 @@ $( window ).resize(function() {
 });
 
 $(document).ready(function(){
-    $( "div#data_current_coords" ).bind( "DOMNodeInserted DOMSubtreeModified DOMNodeRemoved", function(event) {
+		$( "#x" ).val( 0 );
+		$( "#y" ).val( 0 );
+		$( "#z" ).val( 0 );
+
+    $( "div#data_current_coords" ).bind( "DOMNodeInserted DOMNodeRemoved", function(event) {
 		var update = $( "div#data_current_coords" ).html();
 		var all = update.split(",");
+
 		var x = all[0].replace("[", "");
-		var num = parseInt(x);
-		$( "#x" ).val( num );
+		var x_num = parseInt(x);
+		$( "#x" ).val( x_num );
+		console.log("X:" + x);
 
-		var x = all[1].replace(" ", "");
-		var num = parseInt(x);
-		$( "#y" ).val( num );
+		update = $( "div#data_current_coords" ).html();
 
-		var x = all[2].replace(" ", "");
-		x = x.replace("]", "");
-		var num = parseInt(x);
-		$( "#z" ).val( num );
+		var y = all[1].replace(" ", "");
+		var y_num = parseInt(y);
+		$( "#y" ).val( y_num );
+		console.log("Y: " + y);
+
+		update = $( "div#data_current_coords" ).html();
+
+		var z = all[2].replace(" ", "");
+		z = z.replace("]", "");
+		var z_num = parseInt(z);
+		$( "#z" ).val( z_num );
+		console.log("Z: " + z);
+
     })
+
 })
 
 </script>
