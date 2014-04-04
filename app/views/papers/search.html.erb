@@ -2,33 +2,28 @@
 
 <div class="results">
 
-<h1>Results</h1>
+  <h1>Results</h1>
 
-<% if @results.empty? %>
-	<p>No articles</p>
-<% else %>	
-	<%= form_for(@search) do |s| %>
-		<%= s.hidden_field :x, value: @x %>
-		<%= s.hidden_field :y, value: @y %>
-		<%= s.hidden_field :z, value: @z %>
-		<%= s.hidden_field :range, value: @range %>
-		<%= s.submit "Save Search", class: "btn btn-default" %>
-	<% end %>
-<% end %>
+  <% if @results.empty? %>
+    <p>No articles</p>
+  <% else %>  
+    <%= form_for(@search) do |s| %>
+      <%= s.hidden_field :x, value: @x %>
+      <%= s.hidden_field :y, value: @y %>
+      <%= s.hidden_field :z, value: @z %>
+      <%= s.hidden_field :range, value: @range %>
+      <%= s.submit "Save Search", class: "btn btn-default" %>
+    <% end %>
+  <% end %>
 
+  <% @results.each do |r| %>
+    <% @title = Title.where(:doi => r.doi) %>
+    <a href="http://doi.org/<%= r.doi %>" target="_blank" class="title">
+      <%= @title[0].title %>
+    </a><br>
+    <span class="journal"><%= r.journal %></span><br><br>
+  <% end %>
 
-<% @results.each do |r| %>
-
-	<% @title = Title.where(:doi => r.doi) %>
-
-	<a href="http://doi.org/<%= r.doi %>" target="_blank" class="title">
-		<%= @title[0].title %>
-	</a><br>
-
-	<span class="journal"><%= r.journal %></span><br><br>
-
-<% end %>
-
-<%= link_to "Don't see your paper?", new_newpaper_path, class: "nopaper" %>
+  <%= link_to "Don't see your paper?", new_newpaper_path, class: "nopaper" %>
 
 </div>
