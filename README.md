@@ -16,6 +16,14 @@ All data in Synapse uses the MNI coordinate system.
 
 The brain model also comes from the Neurosynth Project. Their example code is on GitHub [here](https://github.com/neurosynth/nsviewer/tree/master/example).
 
+### Key files
+
+    app > controllers > papers_controller.rb
+
+    app > views > site > home.html.erb
+
+    app > views > papers > search.html.erb
+
 ### To launch app
 
 Online: visit [searchsynapse.herokuapp.com](http://searchsynapse.herokuapp.com/)
