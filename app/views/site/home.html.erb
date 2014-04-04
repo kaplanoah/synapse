@@ -1,89 +1,88 @@
 <div class="container home">
 
-<div class="row">
+  <div class="row">
 
-<img src="<%= asset_path( 'nervecell10.jpeg' ) %>" class="nervecell" />
-<a class="synapsehome" href="/">Synapse</a>
+    <img src="<%= asset_path( 'nervecell10.jpeg' ) %>" class="nervecell" />
+    <a class="synapsehome" href="/">Synapse</a>
+    
+    <a href="/signin"><span class="glyphicon glyphicon-user"></span></a>
+    <%= link_to "Sign In", signin_path, class: "signin" %>
 
-<a href="/signin"><span class="glyphicon glyphicon-user"></span></a>
-<%= link_to "Sign In", signin_path, class: "signin" %>
+    <div class="brain">
+      <div id="left">
+        <div class="view" id="view_coronal">
+          <canvas height="220" id="cor_canvas" width="220"></canvas>
+          <div class="slider nav-slider-vertical" id="nav-yaxis"></div>
+        </div>
+        <div class="view" id="view_axial">
+          <canvas height="264" id="axial_canvas" width="220"></canvas>
+          <div class="slider nav-slider-vertical" id="nav-zaxis"></div>
+        </div>
+      </div>
+      <div id="right">
+        <div class="view" id="view_sagittal">
+          <canvas height="220" id="sag_canvas" width="264"></canvas>
+          <div class="slider nav-slider-horizontal" id="nav-xaxis"></div>
+        </div>
+        <div id="data_panel">
+          <div class="data_display_row">
+            <div class="data_label">Coordinates:</div>
+            <div id="data_current_coords"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<div class="brain">
-		<div id="left">
-			<div class="view" id="view_coronal">
-				<canvas height="220" id="cor_canvas" width="220"></canvas>
-				<div class="slider nav-slider-vertical" id="nav-yaxis"></div>
-			</div>
-			<div class="view" id="view_axial">
-				<canvas height="264" id="axial_canvas" width="220"></canvas>
-				<div class="slider nav-slider-vertical" id="nav-zaxis"></div>
-			</div>
-		</div>
-		<div id="right">
-			<div class="view" id="view_sagittal">
-				<canvas height="220" id="sag_canvas" width="264"></canvas>
-				<div class="slider nav-slider-horizontal" id="nav-xaxis"></div>
-			</div>
-			<div id="data_panel">
-				<div class="data_display_row">
-					<div class="data_label">Coordinates:</div>
-					<div id="data_current_coords"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div id="searchboxes">
 
-	<div id="searchboxes">
+      <p id="mninotice">ALL<br>COORDINATES<br>IN MNI</p>
 
-	<p id="mninotice">ALL<br>COORDINATES<br>IN MNI</p>
+      <%= form_for :search, url: user_search_path do |s| %>
 
-	<%= form_for :search, url: user_search_path do |s| %>
+        <%= s.number_field :x, id: "x" %>
+        <%= s.number_field :y, id: "y" %>
+        <%= s.number_field :z, id: "z" %> <br>
 
-		<%= s.number_field :x, id: "x" %>
-		<%= s.number_field :y, id: "y" %>
-		<%= s.number_field :z, id: "z" %> <br>
+        <%= s.label :x, class: "coordinatelabel" %>
+        <%= s.label :y, class: "coordinatelabel" %>
+        <%= s.label :z, class: "coordinatelabel" %>  <br><br>
 
-		<%= s.label :x, class: "coordinatelabel" %>
-		<%= s.label :y, class: "coordinatelabel" %>
-		<%= s.label :z, class: "coordinatelabel" %>  <br><br>
+        <span class="voxels"><%= s.label " include coordinates +/-", id: "coordinatelabel" %> 
+          <div class="styled-select">
+            <%= select_tag(:range, options_for_select([["0", 0], ["1", 1], ["2", 2], ["3", 3]]), id: "range") %>
+          </div>
+        </span> <br><br>
 
-		<span class="voxels"><%= s.label " include coordinates +/-", id: "coordinatelabel" %>	
-			<div class="styled-select">
-				<%= select_tag(:range, options_for_select([["0", 0], ["1", 1], ["2", 2], ["3", 3]]), id: "range") %>
-			</div>
-		</span> <br><br>
+        <%= s.submit "SEARCH", class: "btn btn-default" %>
 
-		<%= s.submit "SEARCH", class: "btn btn-default" %>
+      <% end %>
 
-	<% end %>
+    </div>
 
-	</div>
+    <div class="pointer"></div>
+    <div class="redbar"></div>
 
-	<div class="pointer"></div>
-	<div class="redbar"></div>
+  </div>
 
-</div>
-<div class="row">
+  <div class="row">
 
-	<div class="about">
+    <div class="about">
+      <h4>Synapse connects neuroscientists not by where their research began, but by where it ended up.</h4>
+      <div class="subabout">
+        <h5>Find neuroscience research articles in a hyper-local search of the human brain. Synapse flips the traditional search by beginning with voxels, not topics.</h5>
+        <h6>130,000 coordinates from 4,000 articles. More data coming soon.</h6>
+      </div>
+    </div>
 
-		<h4>Synapse connects neuroscientists not by where their research began, but by where it ended up.</h4>
+    <img src="<%= asset_path( 'braingraphic3.jpeg' ) %>" class="braingraphic" />
 
-		<div class="subabout">
-		<h5>Find neuroscience research articles in a hyper-local search of the human brain. Synapse flips the traditional search by beginning with voxels, not topics.</h5>
+    <div class="redbarbottom">
+      <p class="left">Data and brain model from the <a href="http://neurosynth.org/">Neurosynth Project</a></p>
+      <p class="right top">View <a href="https://github.com/kaplanoah/synapse">Synapse code</a></p> <br>
+      <p class="right">View <a href="https://github.com/neurosynth">Neurosynth Project code</a></p>
+    </div>
 
-	<h6>130,000 coordinates from 4,000 articles. More data coming soon.</h6>
-		</div>
-	</div>
-
-	<img src="<%= asset_path( 'braingraphic3.jpeg' ) %>" class="braingraphic" />
-	<div class="redbarbottom">
-		<p class="left">Data and brain model from the <a href="http://neurosynth.org/">Neurosynth Project</a></p>
-		<p class="right top">View <a href="https://github.com/kaplanoah/synapse">Synapse code</a></p> <br>
-		<p class="right">View <a href="https://github.com/neurosynth">Neurosynth Project code</a></p>
-	</div>
-
-</div>
+  </div>
 
 </div>
 
@@ -97,42 +96,41 @@ $( ".pointer" ).css({left: (width / 2) - 10});
 $( ".redbarbottom").css({width: width})
 
 $( window ).resize(function() {
-	var width = $(window).width();
-	var height = $(window).height();
-
-	$( ".pointer" ).css({left: (width / 2) - 10});
+  var width = $(window).width();
+  var height = $(window).height();
+  $( ".pointer" ).css({left: (width / 2) - 10});
 });
 
 $(document).ready(function(){
-		$( "#x" ).val( 0 );
-		$( "#y" ).val( 0 );
-		$( "#z" ).val( 0 );
 
-    $( "div#data_current_coords" ).bind( "DOMNodeInserte DOMNodeRemoved", function(event) {
-		var update = $( "div#data_current_coords" ).html();
-		var all = update.split(",");
+  $( "#x" ).val( 0 );
+  $( "#y" ).val( 0 );
+  $( "#z" ).val( 0 );
 
-		var x = all[0].replace("[", "");
-		var x_num = parseInt(x);
-		$( "#x" ).val( x_num );
-		console.log("X:" + x);
+  $( "div#data_current_coords" ).bind( "DOMNodeInserte DOMNodeRemoved", function(event) {
+    var update = $( "div#data_current_coords" ).html();
+    var all = update.split(",");
 
-		update = $( "div#data_current_coords" ).html();
+    var x = all[0].replace("[", "");
+    var x_num = parseInt(x);
+    $( "#x" ).val( x_num );
+    console.log("X:" + x);
 
-		var y = all[1].replace(" ", "");
-		var y_num = parseInt(y);
-		$( "#y" ).val( y_num );
-		console.log("Y: " + y);
+    update = $( "div#data_current_coords" ).html();
 
-		update = $( "div#data_current_coords" ).html();
+    var y = all[1].replace(" ", "");
+    var y_num = parseInt(y);
+    $( "#y" ).val( y_num );
+    console.log("Y: " + y);
 
-		var z = all[2].replace(" ", "");
-		z = z.replace("]", "");
-		var z_num = parseInt(z);
-		$( "#z" ).val( z_num );
-		console.log("Z: " + z);
+    update = $( "div#data_current_coords" ).html();
 
-    })
+    var z = all[2].replace(" ", "");
+    z = z.replace("]", "");
+    var z_num = parseInt(z);
+    $( "#z" ).val( z_num );
+    console.log("Z: " + z);
+  })
 
 })
 
